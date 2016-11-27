@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V7.50.2.10312/W32 for ARM                27/Nov/2016  20:28:30
+# IAR ELF Linker V7.50.2.10312/W32 for ARM                27/Nov/2016  20:30:54
 # Copyright 2007-2015 IAR Systems AB.
 #
 #    Output file  =  
@@ -401,7 +401,7 @@ HAL_SYSTICK_Callback    0x0800102d    0x2  Code  Wk  stm32f1xx_hal_cortex.o [1]
 HAL_SYSTICK_Config      0x08000fd9    0xc  Code  Gb  stm32f1xx_hal_cortex.o [1]
 HAL_SYSTICK_IRQHandler  0x08001025    0x8  Code  Gb  stm32f1xx_hal_cortex.o [1]
 HAL_UART_MspInit        0x080039ab   0x76  Code  Gb  usart.o [1]
-HAL_UART_RxCplt         0x08003a91   0xd6  Code  Gb  lin.o [1]
+HAL_UART_RxCplt         0x08003a93   0xd6  Code  Gb  lin.o [1]
 LIN_FRAME               0x20000efc    0xc  Data  Gb  lin.o [1]
 LIN_MASTER              0x20000f1c    0x4  Data  Gb  lin.o [1]
 MX_GPIO_Init            0x08003f11   0x88  Code  Gb  gpio.o [1]
@@ -424,7 +424,7 @@ SystemClock_Config      0x08003e95   0x7a  Code  Gb  main.o [1]
 SystemCoreClock         0x20000000    0x4  Data  Gb  system_stm32f1xx.o [1]
 SystemInit              0x08003fcd   0x4e  Code  Gb  system_stm32f1xx.o [1]
 UART_SetConfig          0x08003857  0x10c  Code  Lc  stm32f1xx_hal_uart.o [1]
-UB_LIN_Master_Init      0x08003a63   0x2e  Code  Gb  lin.o [1]
+UB_LIN_Master_Init      0x08003a63   0x30  Code  Gb  lin.o [1]
 USART1_IRQHandler       0x0800408b    0xa  Code  Gb  stm32f1xx_it.o [1]
 USBD_CDC                0x20000010   0x38  Data  Gb  usbd_cdc.o [1]
 USBD_CDC_CfgFSDesc      0x2000008c   0x44  Data  Gb  usbd_cdc.o [1]

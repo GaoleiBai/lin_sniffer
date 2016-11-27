@@ -307,6 +307,10 @@ LIN_FRAME_t GetFrameFromBuff(void)
   return f;
 }
 
+void ClearArray(uint8_t* array)
+{
+  memset(array, 0, sizeof(array));
+}
 
 void HAL_UART_RxCplt(UART_HandleTypeDef *huart)
 { 
