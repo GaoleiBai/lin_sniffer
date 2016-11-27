@@ -338,7 +338,6 @@ void HAL_UART_RxCplt(UART_HandleTypeDef *huart)
               LIN_MASTER.mode = WAIT_CHECKSUM;
               LIN_MASTER.crc = wert;
               LIN_MASTER.mode = WAIT_SYNC;
-              //AddFrameToBuff(LIN_FRAME);
               CDC_Transmit_FS(LIN_FRAME.data, 8);
               HAL_GPIO_TogglePin(LED_PIN_GPIO_Port, LED_PIN_Pin);
             }
@@ -349,6 +348,7 @@ void HAL_UART_RxCplt(UART_HandleTypeDef *huart)
           break;
     }
     
+    //
     __HAL_UART_CLEAR_FLAG(&huart1, UART_FLAG_RXNE);
   }
 }

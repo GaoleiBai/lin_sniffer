@@ -26,10 +26,13 @@ extern uint8_t farmeBuffPtr;
 // LIN farme data structure
 //
 typedef struct {
+  uint8_t frame_Header;
   uint8_t frame_id;              // ID-Nummer for Frame
   uint8_t data_len;              // Data lenght
-  uint8_t data[LIN_MAX_DATA];    // data array  
+  uint8_t data[LIN_MAX_DATA];    // data array
+  uint8_t crc;
 }LIN_FRAME_t;
+
 
 //
 // LIN bus status
