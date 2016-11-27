@@ -323,7 +323,7 @@ void HAL_UART_RxCplt(UART_HandleTypeDef *huart)
           
 	case WAIT_ID:
             lin_rx_frame.frame_Header = wert;
-            lin_rx_frame.frame_id = wert & 0x0f;
+            lin_rx_frame.frame_id = wert & ID_MASK;
             lin_rx_frame.data_len =  SetDataLen((wert & (0x03 <<4))>>4);
             LIN_MASTER.mode = WAIT_DATA;
           break;
@@ -349,7 +349,6 @@ void HAL_UART_RxCplt(UART_HandleTypeDef *huart)
           break;
     }
     
-    //
     __HAL_UART_CLEAR_FLAG(&huart1, UART_FLAG_RXNE);
   }
 }

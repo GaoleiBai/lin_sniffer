@@ -18,6 +18,9 @@
 
 #define HAL_LIN_UART_TIMEOUT          100  // Timeout for HAL_Uart_Transmit function 
 
+#define ID_MASK                      0x0f // get real ID from header of lIN message
+//#defien DATALENGHT_MASK              (0x03 <<4))>>4 // get data lenght from header of lIN message
+
 extern UART_HandleTypeDef huart1;
 
 extern uint8_t linRxBff[1];
