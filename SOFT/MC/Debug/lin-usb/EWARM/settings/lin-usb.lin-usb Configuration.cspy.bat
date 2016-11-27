@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\common\bin\cspybat" -f "D:\Intro2\lin-usb\EWARM\settings\lin-usb.lin-usb Configuration.general.xcl" --backend -f "D:\Intro2\lin-usb\EWARM\settings\lin-usb.lin-usb Configuration.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\common\bin\cspybat" -f "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\settings\lin-usb.lin-usb Configuration.general.xcl" --backend -f "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\settings\lin-usb.lin-usb Configuration.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\common\bin\cspybat" -f "D:\Intro2\lin-usb\EWARM\settings\lin-usb.lin-usb Configuration.general.xcl" "--debug_file=%~1" --backend -f "D:\Intro2\lin-usb\EWARM\settings\lin-usb.lin-usb Configuration.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\common\bin\cspybat" -f "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\settings\lin-usb.lin-usb Configuration.general.xcl" "--debug_file=%~1" --backend -f "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\settings\lin-usb.lin-usb Configuration.driver.xcl" 
 
 @echo off 
 :end

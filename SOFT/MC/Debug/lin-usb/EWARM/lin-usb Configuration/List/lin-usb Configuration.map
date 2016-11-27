@@ -1,65 +1,82 @@
 ###############################################################################
 #
-# IAR ELF Linker V7.50.2.10312/W32 for ARM                26/Nov/2016  00:09:48
+# IAR ELF Linker V7.50.2.10312/W32 for ARM                27/Nov/2016  19:10:52
 # Copyright 2007-2015 IAR Systems AB.
 #
 #    Output file  =  
-#        D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Exe\lin-usb
-#        Configuration.out
+#        E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
+#        Configuration\Exe\lin-usb Configuration.out
 #    Map file     =  
-#        D:\Intro2\lin-usb\EWARM\lin-usb Configuration\List\lin-usb
-#        Configuration.map
+#        E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
+#        Configuration\List\lin-usb Configuration.map
 #    Command line =  
-#        "D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Obj\gpio.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Obj\lin.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Obj\main.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
+#        Configuration\Obj\gpio.o"
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
+#        Configuration\Obj\lin.o"
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
+#        Configuration\Obj\main.o"
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
 #        Configuration\Obj\startup_stm32f103xb.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Obj\stm32f1xx_hal.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
+#        Configuration\Obj\stm32f1xx_hal.o"
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
 #        Configuration\Obj\stm32f1xx_hal_cortex.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
 #        Configuration\Obj\stm32f1xx_hal_dma.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
 #        Configuration\Obj\stm32f1xx_hal_flash.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
 #        Configuration\Obj\stm32f1xx_hal_flash_ex.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
 #        Configuration\Obj\stm32f1xx_hal_gpio.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
 #        Configuration\Obj\stm32f1xx_hal_gpio_ex.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
 #        Configuration\Obj\stm32f1xx_hal_msp.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
 #        Configuration\Obj\stm32f1xx_hal_pcd.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
 #        Configuration\Obj\stm32f1xx_hal_pcd_ex.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
 #        Configuration\Obj\stm32f1xx_hal_pwr.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
 #        Configuration\Obj\stm32f1xx_hal_rcc.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
 #        Configuration\Obj\stm32f1xx_hal_rcc_ex.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
 #        Configuration\Obj\stm32f1xx_hal_uart.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Obj\stm32f1xx_it.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Obj\stm32f1xx_ll_usb.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Obj\system_stm32f1xx.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Obj\usart.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Obj\usb_device.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Obj\usbd_cdc.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Obj\usbd_cdc_if.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Obj\usbd_conf.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Obj\usbd_core.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Obj\usbd_ctlreq.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Obj\usbd_desc.o"
-#        "D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Obj\usbd_ioreq.o"
-#        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull -o
-#        "D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Exe\lin-usb
-#        Configuration.out" --map "D:\Intro2\lin-usb\EWARM\lin-usb
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
+#        Configuration\Obj\stm32f1xx_it.o"
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
+#        Configuration\Obj\stm32f1xx_ll_usb.o"
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
+#        Configuration\Obj\system_stm32f1xx.o"
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
+#        Configuration\Obj\usart.o"
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
+#        Configuration\Obj\usb_device.o"
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
+#        Configuration\Obj\usbd_cdc.o"
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
+#        Configuration\Obj\usbd_cdc_if.o"
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
+#        Configuration\Obj\usbd_conf.o"
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
+#        Configuration\Obj\usbd_core.o"
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
+#        Configuration\Obj\usbd_ctlreq.o"
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
+#        Configuration\Obj\usbd_desc.o"
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
+#        Configuration\Obj\usbd_ioreq.o" --redirect _Printf=_PrintfFull
+#        --redirect _Scanf=_ScanfFull -o
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
+#        Configuration\Exe\lin-usb Configuration.out" --map
+#        "E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb
 #        Configuration\List\lin-usb Configuration.map" --config
-#        D:\Intro2\lin-usb\EWARM/stm32f103xb_flash.icf --semihosting --entry
-#        __iar_program_start --vfe
+#        E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM/stm32f103xb_flash.icf
+#        --semihosting --entry __iar_program_start --vfe
 #
 ###############################################################################
 
@@ -249,7 +266,7 @@ Copy/lz77 (__iar_lz77_init_single3)
 
     Module                  ro code  ro data  rw data
     ------                  -------  -------  -------
-D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Obj: [1]
+E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb Configuration\Obj: [1]
     gpio.o                      136
     lin.o                       328                17
     main.o                      150
@@ -553,7 +570,7 @@ uwTick                  0x20000f14    0x4  Data  Lc  stm32f1xx_hal.o [1]
 wert                    0x20000f1c    0x1  Data  Gb  lin.o [1]
 
 
-[1] = D:\Intro2\lin-usb\EWARM\lin-usb Configuration\Obj
+[1] = E:\Projects\lin_sniffer\SOFT\MC\Debug\lin-usb\EWARM\lin-usb Configuration\Obj
 [2] = command line
 [3] = dl7M_tlf.a
 [4] = rt7M_tl.a
