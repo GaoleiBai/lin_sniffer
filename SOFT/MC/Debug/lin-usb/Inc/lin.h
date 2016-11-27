@@ -6,6 +6,7 @@
 
 #define  LIN_SYNC_DATA               0x55  // SyncField (do not edit)
 #define  LIN_MAX_DATA                   8  // max 8 Datenytes
+#define  LIN_RX_TX_ARRAY_LENGHT        12  // Array for tx/rx lin frane to/from PC 
 
 #define  LIN_POWERON_DELAY          10  // Pause after PowerOn     (ca. 10ms)
 #define  LIN_AKTIV_DELAY             1  // Pause for Transceiver (ca. 50us)

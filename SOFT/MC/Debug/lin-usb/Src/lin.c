@@ -8,8 +8,9 @@ LIN_MASTER_t LIN_MASTER;
 LIN_FRAME_t LIN_FRAME;
 LIN_FRAME_t lin_rx_frame;
 
-uint8_t testBuff[12] = {0x1, 0x2};
 uint8_t linRxBff[1] = {0};
+
+uint8_t lin_TxRx_array[LIN_RX_TX_ARRAY_LENGHT] = {0};
 uint8_t wert = 0;
 
 LIN_FRAME_t frameBufer[50] = {0};
@@ -312,6 +313,20 @@ void ClearArray(uint8_t* array)
   memset(array, 0, sizeof(array));
 }
 
+void FrameToArray(LIN_FRAME_t frame)
+{
+  ClearArray(lin_TxRx_array);
+  
+  lin_TxRx_array[0] = frame.frame_Header;
+  lin_TxRx_array[1] = frame.frame_id;
+  lin_TxRx_array[2] = frame.data_len;
+  for(int i = 3, j =0; j < frame.data_len; i++, j++)
+  {
+    lin_TxRx_array[i] = frame.data[j];
+  }
+  lin_TxRx_array[11] = frame.crc;
+}
+
 void HAL_UART_RxCplt(UART_HandleTypeDef *huart)
 { 
   if(__HAL_UART_GET_FLAG(&huart1, UART_FLAG_RXNE))
@@ -343,7 +358,8 @@ void HAL_UART_RxCplt(UART_HandleTypeDef *huart)
               LIN_MASTER.mode = WAIT_CHECKSUM;
               lin_rx_frame.crc = wert;
               LIN_MASTER.mode = WAIT_SYNC;
-              CDC_Transmit_FS(lin_rx_frame.data, 8);
+              FrameToArray(lin_rx_frame);
+              CDC_Transmit_FS(lin_TxRx_array, LIN_RX_TX_ARRAY_LENGHT);
               HAL_GPIO_TogglePin(LED_PIN_GPIO_Port, LED_PIN_Pin);
             }
         break;
