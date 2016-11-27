@@ -6,6 +6,7 @@
 //----------------------------------------------------------------------------
 LIN_MASTER_t LIN_MASTER;
 LIN_FRAME_t LIN_FRAME;
+LIN_FRAME_t lin_rx_frame;
 
 uint8_t testBuff[12] = {0x1, 0x2};
 uint8_t linRxBff[1] = {0};
@@ -14,7 +15,6 @@ uint8_t wert = 0;
 LIN_FRAME_t frameBufer[50] = {0};
 uint8_t farmeBuffPtr = 0;
 
-void HAL_UART_RxCplt(UART_HandleTypeDef *huart);
 // Function declarate
 //----------------------------------------------------------------------------
 int SetDataLen(uint8_t bitMask)
@@ -322,23 +322,24 @@ void HAL_UART_RxCplt(UART_HandleTypeDef *huart)
           break;
           
 	case WAIT_ID:
-            LIN_FRAME.frame_id = wert & 0x0f;
-            LIN_FRAME.data_len =  SetDataLen((wert & (0x03 <<4))>>4);
+            lin_rx_frame.frame_Header = wert;
+            lin_rx_frame.frame_id = wert & 0x0f;
+            lin_rx_frame.data_len =  SetDataLen((wert & (0x03 <<4))>>4);
             LIN_MASTER.mode = WAIT_DATA;
           break;
           
 	case WAIT_DATA:
-            if(LIN_MASTER.data_ptr < LIN_FRAME.data_len)
+            if(LIN_MASTER.data_ptr < lin_rx_frame.data_len)
             {
-              LIN_FRAME.data[LIN_MASTER.data_ptr] = wert;
+              lin_rx_frame.data[LIN_MASTER.data_ptr] = wert;
               LIN_MASTER.data_ptr++;
             }else
             {
               LIN_MASTER.data_ptr = 0;
               LIN_MASTER.mode = WAIT_CHECKSUM;
-              LIN_MASTER.crc = wert;
+              lin_rx_frame.crc = wert;
               LIN_MASTER.mode = WAIT_SYNC;
-              CDC_Transmit_FS(LIN_FRAME.data, 8);
+              CDC_Transmit_FS(lin_rx_frame.data, 8);
               HAL_GPIO_TogglePin(LED_PIN_GPIO_Port, LED_PIN_Pin);
             }
         break;
