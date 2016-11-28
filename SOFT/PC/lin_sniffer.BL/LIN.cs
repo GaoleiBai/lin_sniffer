@@ -8,6 +8,6 @@ namespace lin_sniffer.BL
 {
 	public static class LIN
 	{
-
+		public const int IncomingArrayLenght = 12; 
 	}
 }

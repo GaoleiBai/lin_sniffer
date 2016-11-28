@@ -14,6 +14,8 @@ namespace lin_sniffer
 		private readonly ISerialportManager portManager;
 		private readonly ILinMessageService linMessageService;
 
+		byte[] incomingData = new byte[LIN.IncomingArrayLenght];
+
 
 		public Presentor(IMainForm form, IMessageService msgService, ILinMessageService linMessageService, ISerialportManager serialPortManager)
 		{
@@ -31,7 +33,6 @@ namespace lin_sniffer
 
 		private void SerialPortManager_dataRecived(Object sender, EventArgs e)
 		{
-			byte[] incomingData = new byte[portManager.GetByteToRead()];
 			portManager.readData(incomingData);
 			linMessageService.PrintIncomintMessage(incomingData);
 		}
