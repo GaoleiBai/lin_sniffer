@@ -30,7 +30,28 @@ namespace lin_sniffer
 
 		private void View_ConnectClick(object sender, EventArgs e)
 		{
-			throw new NotImplementedException();
+			var portName = view.GetPortName();
+			if (portName != null && portName != string.Empty)
+			{
+				if (!portManager.PortState)
+				{
+					if (portManager.opnePort(portName))
+					{
+
+					}
+				}
+				else
+				{
+					portManager.closePort();
+					//	view.SetConnectionOff();
+				}
+
+			}
+			else
+			{
+				messageService.ShowExclamation("Please select port");
+			}
+
 		}
 	}
 }
