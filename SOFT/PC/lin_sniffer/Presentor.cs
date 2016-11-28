@@ -12,11 +12,13 @@ namespace lin_sniffer
 		private readonly IMainForm view;
 		private readonly IMessageService messageService;
 		private readonly ISerialportManager portManager;
+		private readonly ILinMessageService linMessageService;
 
-		public Presentor(IMainForm form, IMessageService msgService, ISerialportManager serialPortManager)
+		public Presentor(IMainForm form, IMessageService msgService, ILinMessageService linMessageService, ISerialportManager serialPortManager)
 		{
 			view = form;
 			messageService = msgService;
+			this.linMessageService = linMessageService;
 			portManager = serialPortManager;
 
 			view.ConnectClick += View_ConnectClick;
@@ -37,13 +39,14 @@ namespace lin_sniffer
 				{
 					if (portManager.opnePort(portName))
 					{
-
+						Console.WriteLine("Serial port opened");
 					}
 				}
 				else
 				{
 					portManager.closePort();
 					//	view.SetConnectionOff();
+					Console.WriteLine("Serial port closed");
 				}
 
 			}

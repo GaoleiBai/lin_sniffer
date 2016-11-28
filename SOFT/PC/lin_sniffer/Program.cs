@@ -17,8 +17,9 @@ namespace lin_sniffer
 
 			MainForm form = new MainForm();
 			MessageService service = new MessageService();
+			LinMessageService linService = new LinMessageService();
 			SerialportManager portManager = new SerialportManager();
-			Presentor presentor = new Presentor(form, service, portManager);
+			Presentor presentor = new Presentor(form, service, linService, portManager);
 
 			Application.Run(form);
 		}
