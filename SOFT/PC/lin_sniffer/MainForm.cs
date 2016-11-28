@@ -10,7 +10,12 @@ using System.Windows.Forms;
 
 namespace lin_sniffer
 {
-	public partial class MainForm : Form
+	public interface IMainForm
+	{
+
+	}
+
+	public partial class MainForm : Form, IMainForm
 	{
 		public MainForm()
 		{
