@@ -19,6 +19,7 @@ namespace lin_sniffer.BL
 		bool closePort();
 		void writeData(byte[] data);
 		void readData(byte[] data);
+		int GetByteToRead();
 		event EventHandler dataRecived;
 	}
 
@@ -161,6 +162,11 @@ namespace lin_sniffer.BL
 		{
 			if (dataRecived != null)
 				dataRecived(this, EventArgs.Empty);
+		}
+
+		public int GetByteToRead()
+		{
+			return sp1.BytesToRead;
 		}
 
 		public bool PortState
