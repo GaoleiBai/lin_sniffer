@@ -13,6 +13,7 @@ namespace lin_sniffer
 	public interface IMainForm
 	{
 		void SetPortList(List<string> portList);
+		string GetPortName();
 
 		event EventHandler ConnectClick;
 		event EventHandler PortListClick;
@@ -47,6 +48,20 @@ namespace lin_sniffer
 			{
 				portListBox.Items.Add(p);
 			}
+		}
+
+		public String GetPortName()
+		{
+			string portName = "";
+			try
+			{
+				portName = portListBox.SelectedItem.ToString();
+			}
+			catch (Exception)
+			{
+				// To DO
+			}
+			return portName;
 		}
 
 
