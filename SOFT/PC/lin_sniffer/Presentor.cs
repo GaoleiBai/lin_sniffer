@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace lin_sniffer
 {
-	class Class1
+	class Presentor
 	{
 	}
 }
