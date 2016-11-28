@@ -10,7 +10,7 @@ namespace lin_sniffer
 	{
 		public void PrintIncomintMessage(byte[] messageArray)
 		{
-			Console.WriteLine(messageArray);
+			Console.WriteLine("<- {0}", BitConverter.ToString(messageArray));
 		}
 	}
 }
