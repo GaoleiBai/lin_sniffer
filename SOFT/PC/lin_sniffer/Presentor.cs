@@ -18,6 +18,13 @@ namespace lin_sniffer
 			view = form;
 			messageService = msgService;
 			portManager = serialPortManager;
+
+			view.ConnectClick += View_ConnectClick;
+		}
+
+		private void View_ConnectClick(object sender, EventArgs e)
+		{
+			throw new NotImplementedException();
 		}
 	}
 }

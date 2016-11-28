@@ -36,7 +36,7 @@
 			this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-			this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+			this.portListBox = new System.Windows.Forms.ToolStripComboBox();
 			this.connectButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -59,7 +59,7 @@
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1,
             this.toolStripSeparator1,
-            this.toolStripComboBox1,
+            this.portListBox,
             this.connectButton,
             this.toolStripSeparator2});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -104,10 +104,10 @@
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
 			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
 			// 
-			// toolStripComboBox1
+			// portListBox
 			// 
-			this.toolStripComboBox1.Name = "toolStripComboBox1";
-			this.toolStripComboBox1.Size = new System.Drawing.Size(121, 25);
+			this.portListBox.Name = "portListBox";
+			this.portListBox.Size = new System.Drawing.Size(121, 25);
 			// 
 			// connectButton
 			// 
@@ -168,7 +168,7 @@
 		private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-		private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+		private System.Windows.Forms.ToolStripComboBox portListBox;
 		private System.Windows.Forms.ToolStripButton connectButton;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
 		private System.Windows.Forms.GroupBox groupBox1;
