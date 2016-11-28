@@ -106,6 +106,7 @@
 			// 
 			// portListBox
 			// 
+			this.portListBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.portListBox.Name = "portListBox";
 			this.portListBox.Size = new System.Drawing.Size(121, 25);
 			// 

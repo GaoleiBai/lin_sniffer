@@ -20,6 +20,12 @@ namespace lin_sniffer
 			portManager = serialPortManager;
 
 			view.ConnectClick += View_ConnectClick;
+			view.PortListClick += View_PortListClick;
+		}
+
+		private void View_PortListClick(Object sender, EventArgs e)
+		{
+			view.SetPortList(portManager.GetPortList());
 		}
 
 		private void View_ConnectClick(object sender, EventArgs e)

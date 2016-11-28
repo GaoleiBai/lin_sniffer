@@ -36,8 +36,7 @@ namespace lin_sniffer
 
 		private void PortListBox_Click(Object sender, EventArgs e)
 		{
-			if (PortListClick != null)
-				PortListClick(this, EventArgs.Empty);
+			PortListClick?.Invoke(this, EventArgs.Empty);
 		}
 
 		#region IMainForm mplementation
