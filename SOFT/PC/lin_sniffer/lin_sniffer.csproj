@@ -48,7 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ILinMessageService.cs" />
     <Compile Include="IMessageService.cs" />
+    <Compile Include="LinMessageService.cs" />
     <Compile Include="MessageService.cs" />
     <Compile Include="Presentor.cs" />
     <Compile Include="MainForm.cs">
