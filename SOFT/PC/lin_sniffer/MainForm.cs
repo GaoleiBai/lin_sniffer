@@ -12,7 +12,7 @@ namespace lin_sniffer
 {
 	public interface IMainForm
 	{
-
+		event EventHandler ConnectClick;
 	}
 
 	public partial class MainForm : Form, IMainForm
@@ -20,6 +20,15 @@ namespace lin_sniffer
 		public MainForm()
 		{
 			InitializeComponent();
+			connectButton.Click += ConnectButton_Click;
 		}
+
+		private void ConnectButton_Click(object sender, EventArgs e)
+		{
+			ConnectClick?.Invoke(this, EventArgs.Empty);
+		}
+		#region IMainForm mplementation
+		public event EventHandler ConnectClick;
+		#endregion
 	}
 }
