@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using lin_sniffer.BL;
 
 namespace lin_sniffer
 {
@@ -16,7 +17,13 @@ namespace lin_sniffer
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new MainForm());
+
+			MainForm form = new MainForm();
+			MessageService service = new MessageService();
+			SerialportManager portManager = new SerialportManager();
+			Presentor presentor = new Presentor(form, service, portManager);
+
+			Application.Run(form);
 		}
 	}
 }
