@@ -25,7 +25,7 @@ namespace lin_sniffer.BL
 	public class SerialportManager : ISerialportManager
 	{
 		private bool _portState = false;
-		SerialPort sp1 = new SerialPort("COM1", 38400, Parity.None, 8, StopBits.One);
+		SerialPort sp1 = new SerialPort("COM1", 9600, Parity.None, 8, StopBits.One);
 		Regex regex = new Regex("COM");
 		/// <summary>
 		/// Initialisation events of port.

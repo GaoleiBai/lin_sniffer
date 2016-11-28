@@ -27,6 +27,7 @@ namespace lin_sniffer
 
 			view.ConnectClick += View_ConnectClick;
 			view.PortListClick += View_PortListClick;
+			portManager.PortInit();
 		}
 
 		private void SerialPortManager_dataRecived(Object sender, EventArgs e)
