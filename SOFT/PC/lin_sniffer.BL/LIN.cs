@@ -36,7 +36,7 @@ namespace lin_sniffer.BL
 
 		public override string ToString()
 		{
-			return ($"{Header}  {ID}  {DataLenght}  {BitConverter.ToString(Data)}  {CRC}");
+			return ($"{Header}  {ID}  {DataLenght}  {BitConverter.ToString(Data)}  {CRC,18}");
 		}
 	}
 }
