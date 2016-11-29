@@ -34,7 +34,8 @@ namespace lin_sniffer
 		private void SerialPortManager_dataRecived(Object sender, EventArgs e)
 		{
 			portManager.readData(incomingData);
-			linMessageService.PrintIncomintMessage(incomingData);
+			LIN linMessage = new LIN(incomingData);
+			linMessageService.PrintIncomintMessage(linMessage.ToString());
 		}
 
 		private void View_PortListClick(Object sender, EventArgs e)
