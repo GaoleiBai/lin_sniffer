@@ -4,10 +4,10 @@ namespace lin_sniffer
 {
 	public class LinMessageService : ILinMessageService
 	{
-		public void PrintIncomintMessage(byte[] messageArray)
+		public void PrintIncomintMessage(string message)
 		{
 			Console.ForegroundColor = ConsoleColor.Green;
-			Console.WriteLine("<- {0}", BitConverter.ToString(messageArray));
+			Console.WriteLine(message);
 		}
 	}
 }

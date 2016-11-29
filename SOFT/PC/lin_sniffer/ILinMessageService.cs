@@ -8,7 +8,7 @@ namespace lin_sniffer
 {
 	public interface ILinMessageService
 	{
-		void PrintIncomintMessage(byte[] messageArray);
+		void PrintIncomintMessage(string message);
 
 	}
 }
