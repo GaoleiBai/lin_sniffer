@@ -24,5 +24,14 @@ namespace lin_sniffer.BL
 			Data = data;
 			CRC = crc;
 		}
+
+		public LIN(byte[] incomingData)
+		{
+			Header = incomingData[0];
+			ID = incomingData[1];
+			DataLenght = incomingData[2];
+			Data = incomingData.Skip(3).Take(DataLenght).ToArray();
+			CRC = incomingData.Last();
+		}
 	}
 }
