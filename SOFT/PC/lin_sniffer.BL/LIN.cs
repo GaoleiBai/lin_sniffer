@@ -33,5 +33,10 @@ namespace lin_sniffer.BL
 			Data = incomingData.Skip(3).Take(DataLenght).ToArray();
 			CRC = incomingData.Last();
 		}
+
+		public override string ToString()
+		{
+			return ($"{Header}  {ID}  {DataLenght}  {BitConverter.ToString(Data)}  {CRC}");
+		}
 	}
 }
